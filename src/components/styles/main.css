@@ -1,0 +1,245 @@
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373b40;
+  width: 48.2vw;
+  margin-left: 39%;
+  margin-top: 1rem;
+}
+
+.main__container {
+  position: relative;
+}
+
+.main__container-name {
+  position: absolute;
+  text-align: center;
+  top: 2.5rem;
+  left: -9.5rem;
+  padding: 4.5vw;
+  background-color: #373b40;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.main__container-name h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 6vw;
+  z-index: 9;
+  background-color: #373b40;
+  border-left: 0.02rem solid var(--color-navbar);
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 2.5rem 1.2rem;
+}
+
+.sidenav-icon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #373b40;
+  z-index: 3;
+  align-items: center;
+  border: 1px solid var(--color-navbar);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.sidenav-icon:hover {
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+
+.main__container-heading {
+  margin-left: 3rem;
+  padding: 5rem 5.5rem 1.5rem 1.5rem;
+  margin-top: 18rem;
+}
+
+.main__container-heading p {
+  margin-top: 0.52rem;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 22px;
+}
+
+.main__contact-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373b40;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: 1px solid var(--color-navbar);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 1rem 1.8rem;
+  border-radius: 4rem;
+  gap: 0.5rem;
+  transition: all 0.5s ease-out;
+}
+
+.main__contact-btn:hover .hide li {
+  transform: translateY(-100%);
+}
+
+.main__contact-btn:hover {
+  border-color: var(--color-main);
+}
+
+.span-icon {
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+}
+
+.main__contact-btn:hover .span-icon {
+  transform: scale(0.9) translateX(25%);
+  color: var(--color-main);
+}
+
+.main__container-heading h3 {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-size: 20px;
+  color: var(--color-main);
+}
+.job-title {
+  display: flex;
+  align-items: center;
+  min-height: 26px;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-navbar);
+}
+
+@media screen and (min-width: 1600px) {
+  .main__container-heading {
+    margin-top: 25rem;
+  }
+  .main__contact-btn {
+    width: 250px;
+  }
+
+  .main__container-name {
+    top: 5rem;
+    left: -13rem;
+  }
+
+  .main__container-heading p {
+    margin-top: 0.52rem;
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 35px;
+  }
+
+  .main__container-heading h3 {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main__container-name {
+    left: -8.8rem;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .main__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    position: relative;
+    height: unset;
+    width: 100%;
+    justify-content: center;
+    border-left: unset;
+    flex-direction: row;
+    padding: 1rem;
+    z-index: 3;
+  }
+  .sidenav::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-navbar);
+  }
+  .main__container-name {
+    position: unset;
+  }
+
+  .main__container-name h1 {
+    font-size: 50px;
+  }
+
+  .main__container-heading {
+    margin: 4rem 0;
+    max-width: 800px;
+    padding: 1rem;
+  }
+  .job-title {
+    justify-content: center;
+  }
+  .main {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__contact-btn {
+    width: 200px;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__container-name h1 {
+    font-size: 38px;
+  }
+  .main__container-name {
+    left: 35%;
+    top: -10%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .main__container-name {
+    left: 30%;
+    top: -13%;
+  }
+}

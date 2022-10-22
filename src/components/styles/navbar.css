@@ -1,0 +1,240 @@
+.navbar {
+  background-color: var(--color-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 3rem;
+  position: sticky;
+  top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+
+.navbar__title {
+  max-width: min-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2.5rem;
+}
+.navbar__title h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  line-height: 1.5rem;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-transform: uppercase;
+  list-style: none;
+  margin-left: 8.5rem;
+}
+
+.navbar__links-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-navbar);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-transform: uppercase;
+  list-style: none;
+  animation: mobileNavbar 1.5s ease;
+}
+
+.close {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.navbar__links-mobile li {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.01rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navbar__links li {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.01rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navbar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.01rem;
+  text-transform: uppercase;
+  background-color: var(--color-navbar);
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  padding: 1rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transform: all 0.3s linear;
+}
+
+.navbar__button-mobile {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.01rem;
+  text-transform: uppercase;
+  background-color: var(--color-navbar);
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  padding: 1rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transform: all 0.3s linear;
+}
+
+.hide {
+  display: flex;
+  width: fit-content;
+  overflow-y: hidden;
+  list-style: none;
+}
+
+.hide li {
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.portfolio_btn {
+  transition: all 0.1s linear;
+}
+
+.hide li:nth-of-type(2) {
+  transition-delay: 0.05s;
+}
+.hide li:nth-of-type(3) {
+  transition-delay: 0.08s;
+}
+.hide li:nth-of-type(4) {
+  transition-delay: 0.11s;
+}
+.hide li:nth-of-type(5) {
+  transition-delay: 0.14s;
+}
+.hide li:nth-of-type(6) {
+  transition-delay: 0.17s;
+}
+.hide li:nth-of-type(7) {
+  transition-delay: 0.2s;
+}
+.hide li:nth-of-type(8) {
+  transition-delay: 0.23s;
+}
+.hide li:nth-of-type(9) {
+  transition-delay: 0.26s;
+}
+
+.hide li::before {
+  content: attr(data);
+  position: absolute;
+  color: var(--color-main);
+  top: 1.12rem;
+  left: 0;
+}
+
+.hide:hover li {
+  transform: translateY(-100%);
+}
+
+.navbar-mb {
+  display: none;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar__links {
+    display: none;
+  }
+  .navbar__button {
+    display: none;
+  }
+  .navbar__button-mobile {
+    display: flex;
+  }
+  .navbar-mb {
+    display: block;
+  }
+
+  .navbar {
+    margin: 0;
+    top: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .grey {
+    background-color: var(--color-navbar) !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .navbar__title h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 1.2rem;
+  }
+  .navbar__links li {
+    font-size: 0.7rem;
+  }
+
+  .navbar__button {
+    font-size: 0.65rem;
+    padding: 1rem;
+  }
+  .navbar__links {
+    gap: 1.5rem;
+  }
+}
+
+@keyframes mobileNavbar {
+  0% {
+    transform: translateY(-100%);
+    background-color: transparent;
+  }
+  50% {
+    transform: translateY(0);
+    background-color: var(--color-navbar);
+  }
+}

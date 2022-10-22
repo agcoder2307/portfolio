@@ -1,0 +1,225 @@
+.contact {
+  padding: 3rem 4rem;
+}
+
+.contact__title {
+  margin-bottom: 2rem;
+}
+
+.contact__title h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.contact__title p {
+  color: var(--color-main);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contact__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact__wrapper-form {
+  display: flex;
+
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.full-name {
+  max-width: 130px;
+  position: relative;
+}
+
+.full-name input {
+  width: 100%;
+  border-radius: 50px;
+  background-color: #373b40;
+  border: 1px solid var(--color-navbar);
+  color: #fff;
+  outline: none;
+  overflow-x: hidden;
+  padding: 1.5rem 0.5rem;
+}
+
+textarea::placeholder {
+  color: #fff;
+  opacity: 0.85;
+}
+input::placeholder {
+  color: #fff;
+  transition: all 0.3s ease;
+  opacity: 0.85;
+}
+
+input:hover::placeholder {
+  opacity: 0.5;
+}
+
+.full-name::before {
+  content: "FULL NAME";
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  position: absolute;
+  top: -7%;
+  right: 15%;
+  background-color: #373b40;
+}
+
+.full-name::after {
+  content: "*";
+  color: var(--color-main);
+  font-size: 15px;
+
+  font-weight: 800;
+  position: absolute;
+  top: -11%;
+  right: 13%;
+}
+.email {
+  max-width: 130px;
+  position: relative;
+}
+
+.email input {
+  width: 100%;
+  border-radius: 50px;
+  background-color: #373b40;
+  border: 1px solid var(--color-navbar);
+  color: #fff;
+  outline: none;
+  overflow-x: hidden;
+  padding: 1.5rem 0.5rem;
+}
+
+.email::before {
+  content: "EMAIL ADDRESS";
+  width: 110px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  position: absolute;
+  top: -7%;
+  right: 2%;
+  background-color: #373b40;
+}
+
+.email::after {
+  content: "*";
+  color: var(--color-main);
+  font-size: 15px;
+  font-weight: 800;
+  position: absolute;
+  top: -11%;
+  right: 1%;
+}
+.message {
+  width: 250px;
+  height: 200px;
+
+  position: relative;
+}
+
+.message textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #373b40;
+  border: 1px solid var(--color-navbar);
+  color: #fff;
+  outline: none;
+  font-family: var(--font-base);
+  resize: none;
+  font-size: 15px;
+  padding: 0.7rem 0.5rem 1rem 0.5rem;
+}
+
+.message::before {
+  content: "MESSAGE";
+  width: 80px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  position: absolute;
+  top: -4%;
+  left: 12%;
+  background-color: #373b40;
+}
+
+.message::after {
+  content: "*";
+  color: var(--color-main);
+  font-size: 15px;
+  font-weight: 800;
+  position: absolute;
+  top: -6%;
+  left: 40%;
+}
+
+form .main__contact-btn {
+  width: 200px;
+}
+
+.contact__wrapper-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  background-color: #373b40;
+  border: 1px solid var(--color-navbar);
+  border-radius: 30px;
+  padding: 2rem;
+}
+
+.contact__wrapper-info .about__info-wrapper {
+  justify-content: start;
+  gap: 1rem;
+}
+
+.contact__wrapper-info .about__info-wrapper li {
+  font-size: 12px;
+}
+
+.contact__wrapper-info-heading h3 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 0.2rem;
+}
+
+.contact__wrapper-info-heading p {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-main);
+  text-transform: uppercase;
+}
+
+.signature {
+  font-family: "Mr Dafoe";
+  font-size: 32px;
+  font-weight: normal;
+  word-spacing: 0.3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 620px) {
+  .contact {
+    width: 100%;
+    padding: 2rem 3rem;
+  }
+  .contact__wrapper {
+    flex-direction: column;
+  }
+  .contact__wrapper-form {
+    align-items: center;
+  }
+}

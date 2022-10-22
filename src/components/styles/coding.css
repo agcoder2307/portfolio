@@ -1,0 +1,89 @@
+.coding {
+  padding: 3rem 4rem;
+  border-bottom: 1px solid var(--color-navbar);
+}
+
+.coding__title {
+  margin-bottom: 2rem;
+}
+
+.coding__title h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.coding__title p {
+  color: var(--color-main);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.coding__wrapper {
+  display: flex;
+  max-width: 900px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem 3rem;
+}
+
+.coding__card {
+  display: flex;
+  max-width: 150px;
+  flex-direction: column;
+  align-items: center;
+  text-align: flex-start;
+  row-gap: 1rem;
+}
+
+.coding__card h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+.coding__card p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.coding__card-circle {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coding__card-circle::before {
+  content: "";
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: #373b40;
+}
+.progress_value {
+  position: relative;
+  color: var(--color-main);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 900px) {
+  .coding {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .coding__title {
+    margin-left: 2rem;
+  }
+
+  .coding__wrapper {
+    max-width: 100%;
+    padding: 1rem 2rem;
+    column-gap: 7rem;
+    justify-content: center;
+  }
+}

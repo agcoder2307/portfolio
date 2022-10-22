@@ -1,0 +1,179 @@
+.pricing {
+  padding: 3rem 4rem;
+  border-bottom: 1px solid var(--color-navbar);
+  overflow-y: hidden;
+  scrollbar-width: 0;
+}
+.pricing::-webkit-scrollbar {
+  display: none;
+}
+.pricing__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing__title {
+  margin-bottom: 2rem;
+}
+
+.pricing__title h1 {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.pricing__title p {
+  color: var(--color-main);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.arrows {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrows::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  z-index: -1;
+  width: 200%;
+  background-color: var(--color-navbar);
+}
+
+.arrows span {
+  cursor: pointer;
+  position: relative;
+  background-color: #373b40;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 1.2rem;
+  border: 1px solid var(--color-navbar);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.arrows span:hover {
+  border: 1px solid var(--color-main);
+}
+
+.pricing__container {
+  display: flex;
+  max-width: 550px;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 6rem;
+  scrollbar-width: 0;
+}
+
+.pricing__container::-webkit-scrollbar {
+  display: none;
+}
+
+.pricing__card {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.pricing__card-heading p {
+  font-size: 33px;
+  line-height: 26px;
+  color: var(--color-main);
+  margin-bottom: 0.5rem;
+}
+
+.pricing__card-heading h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 0.7rem;
+}
+
+.pricing__card-heading h1 {
+  position: relative;
+  width: fit-content;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.pricing__card-heading h1::before {
+  content: "$";
+  position: absolute;
+  top: 15%;
+  left: -15%;
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+.pricing__card-heading h1::after {
+  content: "hour";
+  position: absolute;
+  top: 60%;
+  right: -50%;
+  font-size: 14px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.pricing__card-info p {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  width: 200px;
+}
+
+.photo {
+  position: relative;
+}
+
+.photo::before {
+  content: "new";
+  position: absolute;
+  top: -5%;
+  right: 10%;
+  font-size: 11px;
+  color: black;
+  background-color: var(--color-main);
+  padding: 0.25rem;
+}
+
+@media screen and (max-width: 900px) {
+  .pricing {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  .pricing__title {
+    margin-left: 3rem;
+  }
+
+  .pricing__container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .pricing__container {
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  .pricing__title h1 {
+    font-size: 45px;
+  }
+}
